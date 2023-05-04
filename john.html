@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reviews for John Tan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="logo1.JPG" alt="Private Driving Instructor logo"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="instructor.html">Instructors</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Reviews for John Tan</h1>
+        <div class="reviews-container">
+            <div class="review">
+                <h2>Great instructor!</h2>
+                <p>John was an amazing instructor who made me feel comfortable behind the wheel. He was patient and encouraging, and he gave me helpful feedback that allowed me to improve my driving skills. I would highly recommend him to anyone looking for a driving instructor.</p>
+                <p class="author">- Sarah L.</p>
+            </div>
+            <div class="review">
+                <h2>Passed on the first try!</h2>
+                <p>Thanks to John's expert instruction, I was able to pass my driving test on the first try. He was very knowledgeable about the rules of the road and was able to teach me the skills I needed to become a safe and confident driver. I would definitely recommend him to anyone who is looking to get their license.</p>
+                <p class="author">- Michael C.</p>
+            </div>
+            <div class="review">
+                <h2>Highly recommended!</h2>
+                <p>John was an excellent instructor who was always patient and supportive. He took the time to explain things clearly and made sure that I understood all the concepts before moving on to the next lesson. I would highly recommend him to anyone who is looking for a driving instructor.</p>
+                <p class="author">- Karen T.</p>
+            </div>
+        </div>
+    </div>
+</form>
+
+<h2>Leave a Review</h2>
+<form action="phpscript.php" method="post">
+    <div>
+        <label for="reviewer">Name:</label>
+        <input type="text" id="reviewer" name="reviewer" required>
+    </div>
+    <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+    </div>
+    <div>
+        <label for="review">Review:</label>
+        <textarea id="review" name="review" required></textarea>
+    </div>
+    <div>
+        <input type="submit" value="Submit Review">
+    </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav img {
+  height: 50px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #f00;
+  text-decoration: none !important;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.instructor-button-container {
+  text-align: center;
+}
+
+.instructor-button {
+  background-color: #3c8bdf;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  margin: 20px auto 0;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+.instructor img {
+  max-width: 100px;
+}
+.instructors {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.instructor {
+  width: 45%;
+  margin-right: 5%;
+}
+.instructor {
+  text-align: center;
+}
+.instructor img {
+  display: block;
+  margin: 0 auto;
+}
+.instructor h3, .instructor p {
+  text-align: center;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Center the reviews container */
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for each review */
+.review {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review h2 {
+  font-size: 1.2rem;
+}
+
+.review p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.review .author {
+  text-align: right;
+  font-size: 0.8rem;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input,
+select,
+textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+input[type="text"], 
+input[type="email"], 
+input[type="tel"],
+select {
+  width: 100%;
+  max-width: 200px; /* or any other value that suits your design */
+}
+
+form input[type="submit"] {
+  width: 200px; /* set desired width */
+  ...
+}
+#review {
+  width: 100%;
+  max-width: 400px; /* or any other value that suits your design */
+  height: 150px; /* or any other value that suits your design */
+}
+
+
+
+

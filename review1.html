@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Driving School - Instructor Reviews</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="reviews">
+		<h2>Reviews for Instructor John Lee</h2>
+		<ul id="review-list">
+			<!-- Existing reviews will be displayed here -->
+		</ul>
+		<form id="review-form">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name"><br>
+			<label for="rating">Rating:</label>
+			<select id="rating" name="rating">
+				<option value="5">5</option>
+				<option value="4">4</option>
+				<option value="3">3</option>
+				<option value="2">2</option>
+				<option value="1">1</option>
+			</select><br>
+			<label for="comment">Comment:</label><br>
+			<textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+
+	<script>
+		$(document).ready(function() {
+			// Retrieve existing reviews from server and display them
+			$.get("/reviews", function(data) {
+				for (var i = 0; i < data.length; i++) {
+					var review = data[i];
+					$("#review-list").append("<li>" + review.name + ": " + review.rating + " stars - " + review.comment + "</li>");
+				}
+			});
+
+			// Submit review when form is submitted
+			$("#review-form").submit(function(event) {
+				event.preventDefault();
+				var name = $("#name").val();
+				var rating = $("#rating").val();
+				var comment = $("#comment").val();
+				$.post("/reviews", { name: name, rating: rating, comment: comment }, function(data) {
+					$("#review-list").append("<li>" + data.name + ": " + data.rating + " stars - " + data.comment + "</li>");
+				});
+				$("#review-form")[0].reset();
+			});
+		});
+	</script>
+</body>
+</html>
